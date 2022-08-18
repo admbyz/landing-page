@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -10,13 +11,18 @@ body {
     height: 100vh;
 }
 
-.header,
+.header-section,
 .footer {
     background-color: #1f2937;
     color: white;
 }
 
-.header {
+.footer {
+    padding: 1rem;
+    text-align: center;
+}
+
+.header-section {
     padding: 1rem 20rem 4rem 20rem;
 
 }
@@ -109,6 +115,10 @@ nav li {
     border-radius: 3px;
 }
 
+.top-menu li:nth-of-type(odd) {
+    margin: 0 1.5rem;
+}
+
 .hero {
     font-size: 48px;
     font-weight: 700;
@@ -136,18 +146,26 @@ nav li {
     color: rgb(135, 183, 254);
 }
 
-.btn-header {
+.btn {
     background-color: #3882f6;
     color: white;
     font-size: 18px;
     border-radius: 0.3rem;
     padding: 0.3rem 1.4rem;
-    margin-top: 1rem;
 }
 
-.btn-header:hover {
+.btn:hover {
     background-color: #1163e7;
     cursor: pointer;
+}
+
+.btn-header {
+    margin-top: 1rem;
+    border: 0.1rem solid rgb(2, 2, 2);
+}
+
+.btn-action {
+    border: 0.1rem solid white;
 }
 
 .hero-content {
@@ -164,4 +182,131 @@ nav li {
 .hero-img img {
     width: 90%;
     object-fit: cover;
+}
+
+.cocktail-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.cocktail,
+.cocktail img {
+    width: 233px;
+    border-radius: 0.3rem;
+}
+
+.cocktail:nth-of-type(2) {
+    color: rgba(3, 157, 218, 0.8);
+    background: rgb(3, 157, 218);
+    background: -moz-linear-gradient(187deg, rgba(3, 157, 218, 1) 32%, rgba(187, 210, 200, 1) 80%, rgba(1, 166, 162, 1) 100%);
+    background: -webkit-linear-gradient(187deg, rgba(3, 157, 218, 1) 32%, rgba(187, 210, 200, 1) 80%, rgba(1, 166, 162, 1) 100%);
+    background: linear-gradient(187deg, rgba(3, 157, 218, 1) 32%, rgba(187, 210, 200, 1) 80%, rgba(1, 166, 162, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#039dda", endColorstr="#01a6a2", GradientType=1);
+}
+
+.cocktail:nth-of-type(3) {
+    background: rgb(178, 0, 2);
+    background: -moz-linear-gradient(187deg, rgba(178, 0, 2, 1) 32%, rgba(212, 6, 1, 1) 80%, rgba(134, 9, 2, 1) 100%);
+    background: -webkit-linear-gradient(187deg, rgba(178, 0, 2, 1) 32%, rgba(212, 6, 1, 1) 80%, rgba(134, 9, 2, 1) 100%);
+    background: linear-gradient(187deg, rgba(178, 0, 2, 1) 32%, rgba(212, 6, 1, 1) 80%, rgba(134, 9, 2, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b20002", endColorstr="#860902", GradientType=1);
+}
+
+.cocktail:nth-of-type(4) {
+    background: rgb(183, 166, 76);
+    background: -moz-linear-gradient(187deg, rgba(183, 166, 76, 1) 32%, rgba(225, 228, 233, 1) 80%, rgba(203, 120, 32, 1) 100%);
+    background: -webkit-linear-gradient(187deg, rgba(183, 166, 76, 1) 32%, rgba(225, 228, 233, 1) 80%, rgba(203, 120, 32, 1) 100%);
+    background: linear-gradient(187deg, rgba(183, 166, 76, 1) 32%, rgba(225, 228, 233, 1) 80%, rgba(203, 120, 32, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b7a64c", endColorstr="#cb7820", GradientType=1);
+}
+
+.cocktail {
+    background: rgb(216, 148, 69);
+    background: -moz-linear-gradient(187deg, rgba(216, 148, 69, 1) 32%, rgba(215, 211, 174, 1) 80%, rgba(222, 168, 43, 1) 100%);
+    background: -webkit-linear-gradient(187deg, rgba(216, 148, 69, 1) 32%, rgba(215, 211, 174, 1) 80%, rgba(222, 168, 43, 1) 100%);
+    background: linear-gradient(187deg, rgba(216, 148, 69, 1) 32%, rgba(215, 211, 174, 1) 80%, rgba(222, 168, 43, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d89445", endColorstr="#dea82b", GradientType=1);
+    color: rgb(215, 211, 174);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.391);
+
+}
+
+.cocktail:hover>img {
+    transition: filter ease 400ms;
+    filter: contrast(110%) saturate(250%);
+    cursor: pointer;
+}
+
+.cocktail:hover>p {
+    color: #fffca4;
+    transition: color ease 400ms;
+}
+
+.cocktail img {
+    transition: filter ease 500ms;
+    object-fit: cover;
+}
+
+.cocktail p {
+    font-size: 2rem;
+    text-shadow: 2px 2px 0px rgb(0 0 0 / 40%);
+    padding: 0.2rem 0.5rem;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 48px;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.testimonials {
+    background-color: #e5e7eb;
+
+}
+
+.testimonials blockquote {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 1rem;
+    min-height: 300px;
+    max-width: 1024px;
+    margin: auto;
+    font-size: 24px;
+    font-weight: 300;
+    text-align: left;
+}
+
+.testimonials p {
+    text-align: end;
+    font-weight: 700;
+}
+
+.action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3882f6;
+    min-height: 150px;
+    max-width: 1024px;
+    border-radius: 0.5rem;
+    margin: 2rem auto;
+    gap: 1rem;
+}
+
+.action-body {
+    color: white;
+    width: 60%;
+}
+
+.action-body p {
+    margin-top: 0.5rem;
+    font-weight: 300;
+    font-size: 1rem;
 }
